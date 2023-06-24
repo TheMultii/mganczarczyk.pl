@@ -1,0 +1,27 @@
+---
+const { author, description }= Astro.props;
+import { Nav, Footer } from "../components";
+import { AUTHOR, DESCRIPTION } from "../consts";
+
+const meta_description = `${author || AUTHOR} | ${description || DESCRIPTION}`;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={meta_description} />
+        <meta name="author" content={AUTHOR} />
+        <link
+            rel="icon"
+            href="https://mganczarczyk.pl/assets/piranyaa.webp"
+            type="x-icon"
+        />
+        <title>{meta_description}</title>
+    </head>
+    <body class="bg-[#181818] text-white">
+        <Nav path={Astro.url.pathname} />
+        <slot />
+        <Footer />
+    </body>
+</html>
