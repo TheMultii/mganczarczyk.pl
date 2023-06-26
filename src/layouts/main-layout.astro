@@ -1,6 +1,7 @@
 ---
-const { author, description }= Astro.props;
-import { Nav, Footer } from "../components";
+const { author, description } = Astro.props;
+import Footer from "../components/Footer/Footer.astro";
+import Nav from "../components/Nav/Nav.astro";
 import { AUTHOR, DESCRIPTION } from "../consts";
 
 const meta_description = `${author || AUTHOR} | ${description || DESCRIPTION}`;
@@ -20,7 +21,7 @@ const meta_description = `${author || AUTHOR} | ${description || DESCRIPTION}`;
         <title>{meta_description}</title>
     </head>
     <body class="bg-[#181818] text-white">
-        <Nav path={Astro.url.pathname} />
+        <Nav />
         <slot />
         <Footer />
     </body>
