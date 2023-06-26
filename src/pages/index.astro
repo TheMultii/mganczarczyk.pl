@@ -1,8 +1,8 @@
 ---
-import Header from "../components/Header/Header.astro";
+import Header from "../components/Header/Header.tsx";
 import MainLayout from "../layouts/main-layout.astro";
 ---
 
 <MainLayout>
-    <Header />
+    <Header client:load />
 </MainLayout>
