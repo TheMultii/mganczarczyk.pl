@@ -1,0 +1,55 @@
+---
+const { title, descriptionPrimary, technologies, availability, imageURL } =
+    Astro.props;
+---
+
+<div class="container mx-auto mt-12 lg:mt-24 portfolio-item px-2">
+    <div class="flex flex-wrap flex-col-reverse lg:flex-row justify-between">
+        <div class="lg:w-[45%] lg:h-[400px]">
+            <div class="flex flex-col justify-center h-full">
+                <h1
+                    class="text-4xl font-bold text-white my-3 lg:mb-6 lg-mt-0 text-center lg:text-left"
+                >
+                    {title}
+                </h1>
+                <p class="text-xl text-white opacity-80 text-justify">
+                    {descriptionPrimary}
+                </p>
+                <hr class="my-2 opacity-50" />
+                <p class="text-lg text-white opacity-80">
+                    {technologies}
+                </p>
+                <p class="text-sm text-white opacity-80">
+                    {availability}
+                </p>
+            </div>
+        </div>
+        <div class="lg:w-[51%] h-[250px] lg:h-[400px]">
+            <img
+                class="w-full h-full object-center object-cover rounded-lg pointer-events-none select-none"
+                src={imageURL ||
+                    "https://api.mganczarczyk.pl/tairiku/random/midriff?safety=true"}
+                alt="bg-temp"
+            />
+        </div>
+    </div>
+</div>
+
+<style>
+    .portfolio-item:last-of-type {
+        margin-bottom: 6rem;
+    }
+
+    .portfolio-item:nth-of-type(even) > div {
+        flex-direction: row-reverse;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .portfolio-item:nth-of-type(even) > div {
+            flex-direction: column-reverse;
+        }
+        .portfolio-item:last-of-type {
+            margin-bottom: 3rem;
+        }
+    }
+</style>

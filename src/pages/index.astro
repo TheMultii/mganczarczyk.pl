@@ -1,8 +1,30 @@
 ---
-import Header from "../components/Header/Header.tsx";
+import Header from "../components/Header/Header";
 import MainLayout from "../layouts/main-layout.astro";
+import PortfolioItem from "../components/PortfolioItem/PortfolioItem.astro";
 ---
 
 <MainLayout>
     <Header client:visible />
+    <PortfolioItem
+        title="UBB Timetable"
+        descriptionPrimary="An unofficial timetable that allows you to easily view the timetable of the Bielsko-Biała University of Technology. Automatically synchronises changes made to the timetable. Written with ease of use in mind. Downloaded over 300 times within one academic year. 😎"
+        technologies="React Native・Expo・Python・MariaDB"
+        availability="Android・WEB (soon)・Windows (soon)"
+        imageURL="https://images.unsplash.com/photo-1674164832362-21b65ab25617?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+    />
+    <PortfolioItem
+        title="Collection of questions for IT technician exams"
+        descriptionPrimary="A collection of questions with answers for the IT technician exams. All presented on one page, without the need for unnecessary navigation. Many of the questions available there are ranked high in positioning by Google. The site is most visited in January and June - the exam months. 💪"
+        technologies="React・MariaDB"
+        availability="WEB"
+        imageURL="https://images.unsplash.com/photo-1666549467789-d62b3099308e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+    />
+    <PortfolioItem
+        title="Tairiku"
+        descriptionPrimary="A service that indexes and collects anime graphics into a database. There is also an API that returns a random graphic from the database with information about that graphic (width, height, source, hash), and a website and smartphone app for viewing and possibly saving those graphics to disk. An ideal application when we need an 'image placeholder'. The database contains over 4 million records collected continuously for over 5 years from sites such as Reddit/Imgur. 🖼️"
+        technologies="React・Flutter・Python・MariaDB"
+        availability="WEB・Android"
+        imageURL="https://images.unsplash.com/photo-1672009190560-12e7bade8d09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+    />
 </MainLayout>
