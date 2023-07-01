@@ -1,0 +1,4 @@
+.before-tairiku::before {
+    --tw-content: "たいりく";
+    content: "たいりく";
+}

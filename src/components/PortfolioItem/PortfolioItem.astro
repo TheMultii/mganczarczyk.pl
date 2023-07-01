@@ -1,9 +1,16 @@
 ---
-const { title, descriptionPrimary, technologies, availability, imageURL } =
-    Astro.props;
+const {
+    title,
+    descriptionPrimary,
+    technologies,
+    availability,
+    imageURL,
+    displayMoreDetailsButton = false,
+    moreDetailsHref = "#",
+} = Astro.props;
 ---
 
-<div class="container mx-auto mt-12 lg:mt-24 portfolio-item px-2">
+<div class="mg-container mx-auto mt-12 lg:mt-24 portfolio-item px-2">
     <div class="flex flex-wrap flex-col-reverse lg:flex-row justify-between">
         <div class="lg:w-[45%] lg:h-[400px]">
             <div class="flex flex-col justify-center h-full">
@@ -22,13 +29,41 @@ const { title, descriptionPrimary, technologies, availability, imageURL } =
                 <p class="text-sm text-white opacity-80">
                     {availability}
                 </p>
+                {
+                    displayMoreDetailsButton && (
+                        <>
+                            <hr class="my-2 opacity-50" />
+                            <div class="mt-2">
+                                <a
+                                    href={moreDetailsHref}
+                                    class="px-6 transition-colors bg-[#067259] hover:bg-[#045037] text-white font-bold py-2 px-4 rounded inline-flex items-center"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="16"
+                                        height="16"
+                                        fill="currentColor"
+                                        class="bi bi-chevron-right"
+                                        viewBox="0 0 16 16"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                                        />
+                                    </svg>
+                                    <span class="ml-2">More details</span>
+                                </a>
+                            </div>
+                        </>
+                    )
+                }
             </div>
         </div>
         <div class="lg:w-[51%] h-[250px] sm:h-[325px] lg:h-[400px]">
             <img
                 class="w-full h-full object-center object-cover rounded-lg pointer-events-none select-none"
                 src={imageURL ||
-                    "https://api.mganczarczyk.pl/tairiku/random/midriff?safety=true"}
+                    `/assets/${Math.round(Math.random() * 5)}.webp`}
                 alt="bg-temp"
             />
         </div>

@@ -1,6 +1,50 @@
 ---
+import PortfolioItem from "../components/PortfolioItem/PortfolioItem.astro";
 import MainLayout from "../layouts/main-layout.astro";
 ---
 
 <MainLayout>
+    <div class="w-full grid place-items-center">
+        <div
+            class="rounded-xl w-[95%] lg:w-[80%] mt-24 py-[4.25rem] lg:py-24 text-center bg-black text-3xl sm:text-4xl lg:text-5xl relative z-[1] after:content[''] after:z-[-1] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url('/assets/portfolio_card.webp')] after:bg-cover after:bg-center after:bg-no-repeat after:rounded-xl after:opacity-[.0875]"
+        >
+            Portfolio
+        </div>
+    </div>
+    <div class="w-[75%] lg:w-[30%] mx-auto mt-8 mb-[-1rem] lg:mb-[-3rem]">
+        <h5
+            class="text-center flex flex-row before:mr-2.5 after:ml-2.5 before:content-[''] before:flex-1 before:m-auto before:border-b before:border-solid after:flex-1 after:m-auto after:border-b after:border-solid before:opacity-[.375] after:opacity-[.375]"
+        >
+            Marcel Gańczarczyk
+        </h5>
+    </div>
+    <div>
+        <PortfolioItem
+            title="UBB Timetable"
+            descriptionPrimary="An unofficial timetable that allows you to easily view the timetable of the Bielsko-Biała University of Technology. Automatically synchronises changes made to the timetable. Written with ease of use in mind. Downloaded over 300 times within one academic year. 😎"
+            technologies="React Native・Expo・Python・MariaDB"
+            availability="Android・WEB (soon)・Windows (soon)"
+            displayMoreDetailsButton={true}
+            moreDetailsHref="/portfolio/ubb-timetable"
+            imageURL="https://images.unsplash.com/photo-1674164832362-21b65ab25617?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+        />
+        <PortfolioItem
+            title="Collection of questions for IT technician exams"
+            descriptionPrimary="A collection of questions with answers for the IT technician exams. All presented on one page, without the need for unnecessary navigation. Many of the questions available there are ranked high in positioning by Google. The site is most visited in January and June - the exam months. 💪"
+            technologies="React・MariaDB"
+            availability="WEB"
+            displayMoreDetailsButton={true}
+            moreDetailsHref="/portfolio/it-technician-exams"
+            imageURL="https://images.unsplash.com/photo-1666549467789-d62b3099308e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+        />
+        <PortfolioItem
+            title="Tairiku"
+            descriptionPrimary="A service that indexes and collects anime graphics into a database. There is also an API that returns a random graphic from the database with information about that graphic (width, height, source, hash), and a website and smartphone app for viewing and possibly saving those graphics to disk. An ideal application when we need an 'image placeholder'. The database contains over 4 million records collected continuously for over 5 years from sites such as Reddit/Imgur. 🖼️"
+            technologies="React・Python・MariaDB"
+            availability="WEB・Android"
+            displayMoreDetailsButton={true}
+            moreDetailsHref="/portfolio/tairiku"
+            imageURL="https://images.unsplash.com/photo-1672009190560-12e7bade8d09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+        />
+    </div>
 </MainLayout>

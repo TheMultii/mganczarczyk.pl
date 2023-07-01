@@ -1,0 +1,22 @@
+---
+import MainLayout from "../../layouts/main-layout.astro";
+
+import "./tairiku.css";
+---
+
+<MainLayout>
+    <div class="w-full grid place-items-center">
+        <div
+            class="rounded-xl w-[95%] lg:w-[80%] mt-24 py-[4.25rem] lg:py-24 text-center bg-black text-3xl sm:text-4xl lg:text-5xl relative z-[1] after:content[''] before-tairiku before:absolute before:top-1/2 before:left-1/2 before:z-[-1] before:opacity-[.0825] before:translate-y-[-50%] before:translate-x-[-50%] before:text-7xl before:font-extrabold after:z-[-1] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url('/assets/tairiku_card.webp')] after:bg-cover after:bg-center after:bg-no-repeat after:rounded-xl after:opacity-[.0875]"
+        >
+            Tairiku
+        </div>
+    </div>
+    <div class="w-[75%] lg:w-[30%] mx-auto my-8">
+        <h5
+            class="text-center flex flex-row before:mr-2.5 after:ml-2.5 before:content-[''] before:flex-1 before:m-auto before:border-b before:border-solid after:flex-1 after:m-auto after:border-b after:border-solid before:opacity-[.375] after:opacity-[.375]"
+        >
+            Marcel Gańczarczyk
+        </h5>
+    </div>
+</MainLayout>
