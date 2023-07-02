@@ -2,6 +2,7 @@
 import "./Nav.css";
 
 const path = Astro.url.pathname.toLowerCase();
+const email = "marcel@mganczarczyk.pl";
 ---
 
 <nav class="my-5 z-[2] fixed w-full flex justify-center">
@@ -45,7 +46,7 @@ const path = Astro.url.pathname.toLowerCase();
         style="border: 1px solid rgba(255, 255, 255, 0.125);"
     >
         <a
-            href="/"
+            href={`mailto:${email}`}
             class="transition spin_animation hover:bg-[rgba(48,48,48,.4)] h-[40px] leading-10 text-white px-[9.01px] rounded-3xl"
         >
             🤙
