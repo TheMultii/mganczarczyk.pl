@@ -1,0 +1,45 @@
+---
+import { ArrowRight, Calendar, User } from "astro-feather-icons";
+const { createdAt, createdBy, title, description, image, link } = Astro.props;
+---
+
+<div class="container mx-auto px-2 mb-12">
+    <div class="overflow-hidden rounded">
+        <img
+            src={image || "/assets/blog_card.webp"}
+            alt={"bg_img"}
+            class="w-full min-h-[300px] object-cover object-center opacity-90 transition duration-500 ease-in-out transform hover:scale-105 hover:opacity-100"
+        />
+    </div>
+    <div class="py-6 mb-6 border-b border-[#9EA0A063] flex flex-row">
+        <p
+            class="pr-4 mr-4 border-r border-[#9EA0A063] flex flex-row items-center cursor-pointer transition-colors hover:text-[#1ab69d]"
+        >
+            <Calendar class="inline-block h-[18px] w-[18px] mr-2.5" />
+            {createdAt || "N/A"}
+        </p>
+        <p
+            class="flex flex-row items-center cursor-pointer transition-colors hover:text-[#1ab69d]"
+        >
+            <User class="inline-block h-[18px] w-[18px] mr-2.5" />
+            {createdBy || "N/A"}
+        </p>
+    </div>
+    <div>
+        <h2 class="mb-6 font-bold text-3xl">
+            <a href={link || "#"} class="transition hover:text-[#1ab69d]">
+                {title}</a
+            >
+        </h2>
+        <p class="text-[#9EA0A0]">
+            {description}
+        </p>
+        <a
+            class="mt-6 inline-block items-center transition hover:text-[#1ab69d] group"
+            href={link || "#"}
+            >Read more <ArrowRight
+                class="group-hover:ml-1 group-hover:text-[#1ab69d] transition ml-0.5 hover:ml-1 inline-block h-[17px] w-[17px]"
+            />
+        </a>
+    </div>
+</div>
