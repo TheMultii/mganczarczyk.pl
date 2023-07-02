@@ -8,7 +8,7 @@ const { createdAt, createdBy, title, description, image, link } = Astro.props;
         <img
             src={image || "/assets/blog_card.webp"}
             alt={"bg_img"}
-            class="w-full min-h-[300px] object-cover object-center opacity-90 transition duration-500 ease-in-out transform hover:scale-105 hover:opacity-100"
+            class="w-full min-h-[250px] md:min-h-[300px] object-cover object-center opacity-90 transition duration-500 ease-in-out transform hover:scale-105 hover:opacity-100"
         />
     </div>
     <div class="py-6 mb-6 border-b border-[#9EA0A063] flex flex-row">
