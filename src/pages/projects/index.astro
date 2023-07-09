@@ -1,6 +1,6 @@
 ---
-import PortfolioItem from "../components/PortfolioItem/PortfolioItem.astro";
-import MainLayout from "../layouts/main-layout.astro";
+import PortfolioItem from "../../components/PortfolioItem/PortfolioItem.astro";
+import MainLayout from "../../layouts/main-layout.astro";
 ---
 
 <MainLayout>
@@ -8,7 +8,7 @@ import MainLayout from "../layouts/main-layout.astro";
         <div
             class="rounded-xl w-[95%] lg:w-[80%] mt-24 py-[4.25rem] lg:py-24 text-center bg-black text-3xl sm:text-4xl lg:text-5xl relative z-[1] after:content[''] after:z-[-1] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url('/assets/portfolio_card.webp')] after:bg-cover after:bg-center after:bg-no-repeat after:rounded-xl after:opacity-[.0875]"
         >
-            Portfolio
+            Projects
         </div>
     </div>
     <div class="w-[75%] lg:w-[30%] mx-auto mt-8 mb-[-1rem] lg:mb-[-3rem]">
@@ -25,8 +25,8 @@ import MainLayout from "../layouts/main-layout.astro";
             technologies="React Native・Expo・Python・MariaDB"
             availability="Android・WEB (soon)・Windows (soon)"
             displayMoreDetailsButton={true}
-            moreDetailsHref="/portfolio/ubb-timetable"
-            imageURL="https://images.unsplash.com/photo-1674164832362-21b65ab25617?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+            moreDetailsHref="/projects/ubb-timetable"
+            imageURL="/assets/ubb_timetable/ubb-1.webp"
         />
         <PortfolioItem
             title="Collection of questions for IT technician exams"
@@ -34,8 +34,8 @@ import MainLayout from "../layouts/main-layout.astro";
             technologies="React・MariaDB"
             availability="WEB"
             displayMoreDetailsButton={true}
-            moreDetailsHref="/portfolio/it-technician-exams"
-            imageURL="https://images.unsplash.com/photo-1666549467789-d62b3099308e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+            moreDetailsHref="/projects/it-technician-exams"
+            imageURL="/assets/it_technician_exams/it-1.webp"
         />
         <PortfolioItem
             title="Tairiku"
@@ -43,8 +43,8 @@ import MainLayout from "../layouts/main-layout.astro";
             technologies="React・Python・MariaDB"
             availability="WEB・Android"
             displayMoreDetailsButton={true}
-            moreDetailsHref="/portfolio/tairiku"
-            imageURL="https://images.unsplash.com/photo-1672009190560-12e7bade8d09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80"
+            moreDetailsHref="/projects/tairiku"
+            useBlurhashImageComponent={true}
         />
     </div>
 </MainLayout>

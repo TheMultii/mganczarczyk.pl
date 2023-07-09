@@ -7,7 +7,9 @@ const {
     imageURL,
     displayMoreDetailsButton = false,
     moreDetailsHref = "#",
+    useBlurhashImageComponent = false,
 } = Astro.props;
+import BlurhashImage from "../BlurhashImage/BlurhashImage";
 ---
 
 <div class="mg-container mx-auto mt-12 lg:mt-24 portfolio-item px-2">
@@ -60,12 +62,23 @@ const {
             </div>
         </div>
         <div class="lg:w-[51%] h-[250px] sm:h-[325px] lg:h-[400px]">
-            <img
-                class="w-full h-full object-center object-cover rounded-lg pointer-events-none select-none"
-                src={imageURL ||
-                    `/assets/${Math.round(Math.random() * 5)}.webp`}
-                alt="bg-temp"
-            />
+            {
+                useBlurhashImageComponent ? (
+                    <BlurhashImage
+                        client:visible
+                        class="w-full h-full object-center object-cover rounded-lg pointer-events-none select-none"
+                    />
+                ) : (
+                    <img
+                        class="w-full h-full object-center object-cover rounded-lg pointer-events-none select-none"
+                        src={
+                            imageURL ||
+                            `/assets/${Math.round(Math.random() * 5)}.webp`
+                        }
+                        alt="bg-temp"
+                    />
+                )
+            }
         </div>
     </div>
 </div>

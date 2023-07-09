@@ -1,13 +1,16 @@
 ---
 import MainLayout from "../../layouts/main-layout.astro";
+import BlurhashImagePortfolio from "../../components/BlurhashImage/BlurhashImagePortfolio";
+
+import "./tairiku.css";
 ---
 
 <MainLayout>
     <div class="w-full grid place-items-center">
         <div
-            class="rounded-xl w-[95%] lg:w-[80%] mt-24 py-[4.25rem] lg:py-24 text-center bg-black text-3xl sm:text-4xl lg:text-5xl relative z-[1] after:content[''] after:z-[-1] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url('/assets/ubb_timetable_card.webp')] after:bg-cover after:bg-center after:bg-no-repeat after:rounded-xl after:opacity-[.0875]"
+            class="rounded-xl w-[95%] lg:w-[80%] mt-24 py-[4.25rem] lg:py-24 text-center bg-black text-3xl sm:text-4xl lg:text-5xl relative z-[1] after:content[''] before-tairiku before:absolute before:top-1/2 before:left-1/2 before:z-[-1] before:opacity-[.0825] before:translate-y-[-50%] before:translate-x-[-50%] before:text-7xl before:font-extrabold after:z-[-1] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url('/assets/tairiku_card.webp')] after:bg-cover after:bg-center after:bg-no-repeat after:rounded-xl after:opacity-[.0875]"
         >
-            UBB Timetable
+            Tairiku
         </div>
     </div>
     <div class="w-[75%] lg:w-[30%] mx-auto my-8">
@@ -26,28 +29,25 @@ import MainLayout from "../../layouts/main-layout.astro";
                 <h2
                     class="mb-8 text-3xl text-center md:text-left md:text-4xl lg:text-5xl font-bold"
                 >
-                    UBB Timetable Details
+                    Tairiku Details
                 </h2>
                 <p class="text-[#9EA0A0]">
-                    An unofficial timetable that allows you to easily view the
-                    timetable of the Bielsko-Biała University of Technology.
-                    Automatically synchronises changes made to the timetable.
-                    Written with ease of use in mind. Downloaded over 300 times
-                    within one academic year.
+                    A service that indexes and collects anime graphics into a
+                    database. There is also an API that returns a random graphic
+                    from the database with information about that graphic
+                    (width, height, source, hash), and a website and smartphone
+                    app for viewing and possibly saving those graphics to disk.
+                    An ideal application when we need an 'image placeholder'.
+                    The database contains over 4 million records collected
+                    continuously for over 5 years from sites such as
+                    Reddit/Imgur.
                 </p>
                 <p class="mt-5">
-                    <p class="text-[#9EA0A0]">
-                        Android・<a
-                            class="transition-colors text-[#1ab69d] hover:text-[#067259]"
-                            href="https://play.google.com/store/apps/details?id=pl.mganczarczyk.PLANATH"
-                            >CLICK HERE</a
-                        >
-                    </p>
                     <p class="text-[#9EA0A0]">
                         WEB・<span>COMMING SOON</span>
                     </p>
                     <p class="text-[#9EA0A0]">
-                        Windows・<span>COMMING SOON</span>
+                        ANDROID・<span>COMMING SOON</span>
                     </p>
                 </p>
             </div>
@@ -64,7 +64,7 @@ import MainLayout from "../../layouts/main-layout.astro";
                         <h6 class="text-lg font-bold mb-1">Date:</h6>
                         <span
                             class="pl-10 text-[#9EA0A0] relative before:content-[''] before:absolute before:w-8 before:h-px before:top-1/2 before:left-0 before:bg-[#1ab69d]"
-                            >2022</span
+                            >2018</span
                         >
                     </div>
                     <div
@@ -73,7 +73,7 @@ import MainLayout from "../../layouts/main-layout.astro";
                         <h6 class="text-lg font-bold mb-1">Tech stack:</h6>
                         <span
                             class="pl-10 text-[#9EA0A0] relative before:content-[''] before:absolute before:w-8 before:h-px before:top-1/2 before:left-0 before:bg-[#1ab69d]"
-                            >React Native・Expo・Python・MariaDB</span
+                            >React・Python・MariaDB</span
                         >
                     </div>
                     <div
@@ -82,7 +82,7 @@ import MainLayout from "../../layouts/main-layout.astro";
                         <h6 class="text-lg font-bold mb-1">Availability:</h6>
                         <span
                             class="pl-10 text-[#9EA0A0] relative before:content-[''] before:absolute before:w-8 before:h-px before:top-1/2 before:left-0 before:bg-[#1ab69d]"
-                            >Android・WEB (soon)・Windows (soon)</span
+                            >WEB・Android</span
                         >
                     </div>
                     <div
@@ -100,42 +100,18 @@ import MainLayout from "../../layouts/main-layout.astro";
         <div class="flex-1 md:flex-initial md:w-8/12">
             <div class="flex row mb-2 md:mb-6">
                 <div class="w-full md:w-1/2 px-1 md:px-3">
-                    <div class="relative pb-[100%] rounded-lg overflow-hidden">
-                        <img
-                            class="absolute w-full h-full object-cover left-0 top-0 md:hover:scale-105 transition-transform duration-500"
-                            src="https://api.mganczarczyk.pl/tairiku/random/streetmoe?safety=true&id=1"
-                            alt=""
-                        />
-                    </div>
+                    <BlurhashImagePortfolio client:visible />
                 </div>
                 <div class="w-full md:w-1/2 px-1 md:px-3">
-                    <div class="relative pb-[100%] rounded-lg overflow-hidden">
-                        <img
-                            class="absolute w-full h-full object-cover left-0 top-0 md:hover:scale-105 transition-transform duration-500"
-                            src="https://api.mganczarczyk.pl/tairiku/random/streetmoe?safety=true&id=2"
-                            alt=""
-                        />
-                    </div>
+                    <BlurhashImagePortfolio client:visible />
                 </div>
             </div>
             <div class="flex row">
                 <div class="w-full md:w-1/2 px-1 md:px-3">
-                    <div class="relative pb-[100%] rounded-lg overflow-hidden">
-                        <img
-                            class="absolute w-full h-full object-cover left-0 top-0 md:hover:scale-105 transition-transform duration-500"
-                            src="https://api.mganczarczyk.pl/tairiku/random/streetmoe?safety=true&id=3"
-                            alt=""
-                        />
-                    </div>
+                    <BlurhashImagePortfolio client:visible />
                 </div>
                 <div class="w-full md:w-1/2 px-1 md:px-3">
-                    <div class="relative pb-[100%] rounded-lg overflow-hidden">
-                        <img
-                            class="absolute w-full h-full object-cover left-0 top-0 md:hover:scale-105 transition-transform duration-500"
-                            src="https://api.mganczarczyk.pl/tairiku/random/streetmoe?safety=true&id=4"
-                            alt=""
-                        />
-                    </div>
+                    <BlurhashImagePortfolio client:visible />
                 </div>
             </div>
         </div>

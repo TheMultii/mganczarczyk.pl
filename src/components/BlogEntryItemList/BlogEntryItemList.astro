@@ -4,13 +4,13 @@ const { createdAt, createdBy, title, description, image, link } = Astro.props;
 ---
 
 <div class="container mx-auto px-2 mb-12">
-    <div class="overflow-hidden rounded">
+    <a href={link} class="block overflow-hidden rounded cursor-pointer">
         <img
             src={image || "/assets/blog_card.webp"}
             alt={"bg_img"}
             class="w-full min-h-[250px] md:min-h-[300px] object-cover object-center opacity-90 transition duration-500 ease-in-out transform hover:scale-105 hover:opacity-100"
         />
-    </div>
+    </a>
     <div class="py-6 mb-6 border-b border-[#9EA0A063] flex flex-row">
         <p
             class="pr-4 mr-4 border-r border-[#9EA0A063] flex flex-row items-center cursor-pointer transition-colors hover:text-[#1ab69d]"
@@ -38,7 +38,7 @@ const { createdAt, createdBy, title, description, image, link } = Astro.props;
             class="mt-6 inline-block items-center transition hover:text-[#1ab69d] group"
             href={link || "#"}
             >Read more <ArrowRight
-                class="group-hover:ml-1 group-hover:text-[#1ab69d] transition ml-0.5 hover:ml-1 inline-block h-[17px] w-[17px]"
+                class="ml-0.5 group-hover:ml-1 group-hover:text-[#1ab69d] transition-all ml-0.5 hover:ml-1 inline-block h-[17px] w-[17px]"
             />
         </a>
     </div>
