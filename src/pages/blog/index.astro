@@ -21,7 +21,7 @@ import BlogEntryItemList from "../../components/BlogEntryItemList/BlogEntryItemL
     </div>
 
     <div
-        class="container px-2 md:px-0 mx-auto flex flex-col md:flex-row gap-4 mb-8"
+        class="mg-container px-2 md:px-0 mx-auto flex flex-col md:flex-row gap-4 mb-8"
     >
         <div class="flex-1 md:flex-initial md:w-8/12">
             <BlogEntryItemList
@@ -78,3 +78,22 @@ import BlogEntryItemList from "../../components/BlogEntryItemList/BlogEntryItemL
         </div>
     </div>
 </MainLayout>
+
+<style>
+    .portfolio-item:last-of-type {
+        margin-bottom: 6rem;
+    }
+
+    .portfolio-item:nth-of-type(even) > div {
+        flex-direction: row-reverse;
+    }
+
+    @media screen and (max-width: 1024px) {
+        .portfolio-item:nth-of-type(even) > div {
+            flex-direction: column-reverse;
+        }
+        .portfolio-item:last-of-type {
+            margin-bottom: 3rem;
+        }
+    }
+</style>
