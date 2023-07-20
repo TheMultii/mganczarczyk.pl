@@ -25,7 +25,7 @@ import BlogEntryItemList from "../../components/BlogEntryItemList/BlogEntryItemL
     >
         <div class="flex-1 md:flex-initial md:w-8/12">
             <BlogEntryItemList
-                createdAt="2.07.2023"
+                createdAt="9.07.2023"
                 createdBy="Marcel Gańczarczyk"
                 title="Lorem ipsum #1"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -33,7 +33,7 @@ import BlogEntryItemList from "../../components/BlogEntryItemList/BlogEntryItemL
                 link="/blog/lorem-1"
             />
             <BlogEntryItemList
-                createdAt="3.07.2023"
+                createdAt="9.07.2023"
                 createdBy="Marcel Gańczarczyk"
                 title="Lorem ipsum #2"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -41,12 +41,28 @@ import BlogEntryItemList from "../../components/BlogEntryItemList/BlogEntryItemL
                 link="/blog/lorem-2"
             />
             <BlogEntryItemList
-                createdAt="2.07.2023"
+                createdAt="9.07.2023"
                 createdBy="Marcel Gańczarczyk"
                 title="Lorem ipsum #3"
                 description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
                 image="/assets/it_technician_exams.webp"
                 link="/blog/lorem-3"
+            />
+            <BlogEntryItemList
+                createdAt="20.07.2023"
+                createdBy="Marcel Gańczarczyk"
+                title="Lorem ipsum #4"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                image="/assets/blog_4.webp"
+                link="/blog/lorem-4"
+            />
+            <BlogEntryItemList
+                createdAt="20.07.2023"
+                createdBy="Marcel Gańczarczyk"
+                title="Lorem ipsum #5"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                image="/assets/blog_5.webp"
+                link="/blog/lorem-5"
             />
         </div>
         <div class="flex-1 md:flex-initial md:w-4/12">
@@ -56,24 +72,19 @@ import BlogEntryItemList from "../../components/BlogEntryItemList/BlogEntryItemL
                 >
                     Categories
                 </h3>
-                <p
-                    class="flex flex-row items-center mb-3.5 cursor-pointer transition-colors text-[#9EA0A0] hover:text-[#1ab69d]"
-                >
-                    <ChevronsRight class="inline-block h-[17px] w-[17px]" />
-                    <span class="ml-1.5">Lorem ipsum #1</span>
-                </p>
-                <p
-                    class="flex flex-row items-center mb-3.5 cursor-pointer transition-colors text-[#9EA0A0] hover:text-[#1ab69d]"
-                >
-                    <ChevronsRight class="inline-block h-[17px] w-[17px]" />
-                    <span class="ml-1.5">Lorem ipsum #2</span>
-                </p>
-                <p
-                    class="flex flex-row items-center cursor-pointer transition-colors text-[#9EA0A0] hover:text-[#1ab69d]"
-                >
-                    <ChevronsRight class="inline-block h-[17px] w-[17px]" />
-                    <span class="ml-1.5">Lorem ipsum #3</span>
-                </p>
+                {
+                    [1, 2, 3, 4, 5].map((e) => {
+                        return (
+                            <a
+                                href={"/blog/lorem-" + e}
+                                class="flex flex-row items-center mb-3.5 cursor-pointer transition-colors text-[#9EA0A0] hover:text-[#1ab69d]"
+                            >
+                                <ChevronsRight class="inline-block h-[17px] w-[17px]" />
+                                <span class="ml-1.5">Lorem ipsum #{e}</span>
+                            </a>
+                        );
+                    })
+                }
             </div>
         </div>
     </div>

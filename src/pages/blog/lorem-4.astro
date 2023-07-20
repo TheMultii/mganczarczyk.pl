@@ -1,0 +1,82 @@
+---
+import { ArrowLeft, Calendar, User } from "astro-feather-icons";
+import MainLayout from "../../layouts/main-layout.astro";
+---
+
+<MainLayout>
+    <div class="w-full grid place-items-center">
+        <img
+            src={"/assets/blog_4.webp"}
+            alt={"bg_img"}
+            class="object-cover rounded-xl w-[95%] lg:w-[80%] mt-24 h-[15.5rem] lg:h-[20rem] text-center bg-black text-3xl sm:text-4xl lg:text-5xl"
+        ></img>
+    </div>
+    <div class="mg-container mx-auto px-2 mb-12">
+        <div class="sm:mx-16 lg:mx-32">
+            <div class="py-6 mb-6 border-b border-[#9EA0A063] flex flex-row">
+                <p
+                    class="pr-4 mr-4 border-r border-[#9EA0A063] flex flex-row items-center"
+                >
+                    <Calendar class="inline-block h-[18px] w-[18px] mr-2.5" />
+                    {"20.07.2023"}
+                </p>
+                <p class="flex flex-row items-center">
+                    <User class="inline-block h-[18px] w-[18px] mr-2.5" />
+                    {"Marcel Gańczarczyk"}
+                </p>
+            </div>
+            <div>
+                <h2 class="mb-6 font-bold text-3xl">Lorem ipsum #4</h2>
+                <p class="text-[#9EA0A0]">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Delectus voluptatum ad numquam praesentium aut molestiae
+                    velit aspernatur facere. Voluptatum aliquid ratione magni
+                    delectus, dolor asperiores soluta ex dolorum facilis ipsam.
+                    Expedita temporibus illo repellendus quis, labore error
+                    voluptate nesciunt. Accusamus obcaecati quod eveniet, cumque
+                    voluptas sint est saepe a delectus vitae voluptate animi
+                    distinctio sapiente magnam. Velit quam quae doloribus? Autem
+                    veritatis, ab molestias doloribus a deleniti est
+                    reprehenderit quibusdam dignissimos dicta cupiditate eos.
+                    Excepturi cumque laboriosam repudiandae eveniet, aut, quasi
+                    quisquam mollitia voluptates labore nobis commodi earum?
+                    Similique, officia. Officia voluptates odit architecto
+                    aliquam quidem, optio tempore ab quia cumque facilis,
+                    veritatis non pariatur omnis doloremque necessitatibus! Quae
+                    numquam id facilis? Delectus minima porro quos sed
+                    praesentium magnam obcaecati? Impedit ducimus excepturi
+                    ullam enim nihil? Fugit nulla porro ipsam error at quisquam
+                    architecto reiciendis magni, tempora incidunt quos
+                    cupiditate quibusdam quis fuga velit dolorum nisi quam?
+                    Dignissimos, dolorem corrupti! Dolor nobis praesentium eaque
+                    in, blanditiis expedita facilis voluptatem. Porro dolorum
+                    dolorem eveniet deleniti neque, facilis assumenda aliquid
+                    nisi repudiandae. Nulla sed molestias quasi eaque mollitia
+                    eos vitae magni omnis. Quo nulla eveniet rem ab quae dolorem
+                    facilis fugit ut nesciunt deleniti reiciendis sunt velit
+                    tenetur, voluptatibus porro, eos non dignissimos doloribus
+                    optio consectetur. Ea ipsam molestias omnis qui eos? Ea
+                    officiis magnam fugit ipsum natus quod, nesciunt numquam
+                    perferendis ratione aliquam sed, qui vitae illo minus
+                    asperiores in cumque? Non quidem quasi dignissimos molestias
+                    unde quia iure mollitia aut. Quos tempora veniam recusandae
+                    error ipsum quis rem facere accusamus nulla dolorum minus
+                    quia corporis officia, neque nam cupiditate vitae debitis
+                    aliquam, corrupti sint architecto. Ullam velit rem sed
+                    accusamus. Perferendis laboriosam impedit vitae explicabo
+                    voluptate veniam totam at minima voluptatem nam qui esse
+                    culpa facere nostrum error distinctio aut voluptates
+                    assumenda fuga, repudiandae enim iusto rem, id cupiditate!
+                    Quisquam?
+                </p>
+                <a
+                    class="mt-6 inline-block items-center transition hover:text-[#1ab69d] group"
+                    href={"/blog"}
+                    ><ArrowLeft
+                        class="mr-0.5 mt-[-2px] group-hover:mr-1 group-hover:text-[#1ab69d] transition-all mr-0.5 hover:mr-1 inline-block h-[17px] w-[17px]"
+                    />Go back
+                </a>
+            </div>
+        </div>
+    </div>
+</MainLayout>
