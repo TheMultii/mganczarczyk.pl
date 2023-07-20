@@ -1,8 +1,10 @@
-import { For, createEffect, createSignal } from "solid-js";
+import { createEffect, createSignal } from "solid-js";
 import { blurhashImageFetch } from "./blurhashImageFetch";
+import { ImagePreview } from "../ImagePreview/ImagePreview";
 
 export default function BlurhashImagePortfolio() {
-    const [img, setImg] = createSignal<string>("");
+    const [img, setImg] = createSignal("");
+    const [open, setOpen] = createSignal(false);
     let ref_img: HTMLImageElement, ref_loader: HTMLDivElement;
 
     createEffect(async () => {
@@ -11,6 +13,12 @@ export default function BlurhashImagePortfolio() {
         ];
         await blurhashImageFetch(img, setImg, category, ref_img, ref_loader);
     }, []);
+
+    const onKeyDown = (e: KeyboardEvent) => {
+        if (e.key === "Escape" && open()) {
+            setOpen(false);
+        }
+    };
 
     return (
         <div
@@ -21,8 +29,11 @@ export default function BlurhashImagePortfolio() {
             }`}
         >
             <img
+                tabIndex="0"
+                onKeyDown={(e) => onKeyDown(e)}
+                onClick={() => setOpen(true)}
                 ref={ref_img}
-                class={`opacity-0 hidden opacity-0 absolute w-full h-full object-cover left-0 top-0 md:hover:scale-105 transition-transform duration-500`}
+                class={`opacity-0 cursor-pointer hidden opacity-0 absolute w-full h-full object-cover left-0 top-0 md:hover:scale-105 transition-transform duration-500`}
                 src={img()}
                 alt="image"
             />
@@ -37,6 +48,9 @@ export default function BlurhashImagePortfolio() {
                         <div class="w-3 h-3 bg-gray-300 rounded-full"></div>
                     </div>
                 </div>
+            )}
+            {open() && (
+                <ImagePreview onClose={() => setOpen(false)} image={img()} />
             )}
         </div>
     );
