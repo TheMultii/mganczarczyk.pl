@@ -12,7 +12,7 @@ export const blurhashImageFetch = async (
 
     try {
         const response = await fetch(
-            `https://api.mganczarczyk.pl/tairiku/${category}`,
+            `https://api.mganczarczyk.pl/tairiku/${category}?safety=true`,
             {
                 signal: abortController.signal,
             }
