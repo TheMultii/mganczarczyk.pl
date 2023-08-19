@@ -13,7 +13,7 @@ export default function BlurhashImage(props: { class: string }) {
         <div
             class={`relative w-full h-[250px] sm:h-[325px] lg:h-[400px] ${
                 !img().startsWith("https://") && img() !== ""
-                    ? "relative after:content-[''] after:absolute after:rounded-lg after:top-0 after:left-0 after:w-full after:h-full after:z-[1] after:bg-[rgba(0,0,0,.15)]"
+                    ? "relative after:absolute after:rounded-lg after:top-0 after:left-0 after:w-full after:h-full after:z-[1] after:bg-[rgba(0,0,0,.15)]"
                     : ""
             }`}
         >

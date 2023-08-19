@@ -24,7 +24,7 @@ export default function BlurhashImagePortfolio() {
         <div
             class={`relative pb-[100%] rounded-lg overflow-hidden ${
                 !img().startsWith("https://") && img() !== ""
-                    ? "after:content-[''] after:absolute after:rounded-lg after:top-0 after:left-0 after:w-full after:h-full after:z-[1] after:bg-[rgba(0,0,0,.15)]"
+                    ? "after:absolute after:rounded-lg after:top-0 after:left-0 after:w-full after:h-full after:z-[1] after:bg-[rgba(0,0,0,.15)]"
                     : ""
             }`}
         >
