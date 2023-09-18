@@ -1,26 +1,28 @@
 name: Deploy
 
 on:
-  push:
-    branches:
-      - master
+    push:
+        branches:
+            - master
 
 jobs:
-  build:
-    runs-on: self-hosted
+    build:
+        runs-on: self-hosted
 
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js 20
-        run: |
-          npm i
-          npm run build
-          cd dist
-      - name: Deploy
-        run: |
-          rm ${{ secrets.PATH }}/* -R
-          cd dist
-          cp * ${{ secrets.PATH }}/ -R
-          cd ${{ secrets.PATH }}
-          chmod 755 * -R
-          chown www-data:www-data * -R
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js 20
+              run: |
+                  npm i
+                  npm run build
+                  cd dist
+            - name: Deploy
+              run: |
+                  rm ${{ secrets.PATH }}/* -R
+                  cd dist
+                  cp * ${{ secrets.PATH }}/ -R
+                  cd ${{ secrets.ADDITIONALPATH }}
+                  cp * ${{ secrets.PATH }}/ -R
+                  cd ${{ secrets.PATH }}
+                  chmod 755 * -R
+                  chown www-data:www-data * -R
