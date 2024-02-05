@@ -1,0 +1,131 @@
+---
+import { SolidImg } from "../../components/ImagePreview/SolidImg";
+import MainLayout from "../../layouts/main-layout.astro";
+---
+
+<MainLayout>
+    <div class="w-full grid place-items-center">
+        <div
+            class="rounded-xl w-[95%] lg:w-[80%] mt-24 py-[4.25rem] lg:py-24 text-center bg-black text-3xl sm:text-4xl lg:text-5xl relative z-[1] after:z-[-1] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url('/assets/markdown-notepad.webp')] after:bg-cover after:bg-center after:bg-no-repeat after:rounded-xl after:opacity-[.0875]"
+        >
+            Markdown Notepad
+        </div>
+    </div>
+    <div class="w-3/4 lg:w-[30%] mx-auto my-8">
+        <h5
+            class="text-center flex flex-row before:mr-2.5 after:ml-2.5 before:flex-1 before:m-auto before:border-b before:border-solid after:flex-1 after:m-auto after:border-b after:border-solid before:opacity-[.375] after:opacity-[.375]"
+        >
+            Marcel Gańczarczyk
+        </h5>
+    </div>
+
+    <div
+        class="mg-container px-2 md:px-0 mx-auto flex flex-col md:flex-row gap-4 mb-8"
+    >
+        <div class="flex-1 md:flex-initial md:w-4/12">
+            <div class="pb-6 mb-12 md:mb-20 border-b border-[#9EA0A063]">
+                <h2
+                    class="mb-8 text-3xl text-center md:text-left md:text-4xl lg:text-5xl font-bold"
+                >
+                    Markdown Notepad Details
+                </h2>
+                <p class="text-[#9EA0A0]">
+                    Application developed for an engineering thesis. It is an 
+                    editor for notes in markdown format. It allows the creation
+                    and export of notes, folders and tags, collaboration and the
+                    creation of extensions. The project consists of two parts -
+                    a&nbsp;backend written in NestJS and a&nbsp;frontend written
+                    in Flutter. The app also supports displaying the user's
+                    status on Discord.
+                </p>
+                <p class="mt-5">
+                    <p class="text-[#9EA0A0]">
+                        Windows・<span>Must be compiled from the source code</span>
+                    </p>
+                    <p class="text-[#9EA0A0]">
+                        Linux・<span>Must be compiled from the source code</span>
+                    </p>
+                    <p class="text-[#9EA0A0]">
+                        macOS・<span>Must be compiled from the source code</span>
+                    </p>
+                    <p class="text-[#9EA0A0]">
+                        Android・<span>Must be compiled from the source code</span>
+                    </p>
+                    <p class="text-[#9EA0A0]">
+                        iOS・<span>Must be compiled from the source code</span>
+                    </p>
+                    <p class="text-[#9EA0A0]">
+                        WEB・<span>Must be compiled from the source code</span>
+                    </p>
+                </p>
+            </div>
+            <div>
+                <h4
+                    class="text-2xl font-bold pb-3 mb-6 relative before:absolute before:bottom-0 before:left-0 before:w-[80%] md:before:w-[90%] before:h-px before:bg-[#9EA0A063] after:absolute after:left-0 after:bottom-0 after:w-1/3 after:h-px after:bg-[#1ab69d]"
+                >
+                    Project Details
+                </h4>
+                <div>
+                    <div
+                        class="mb-4 pb-4 relative before:absolute before:w-2/3 before:h-px before:bottom-0 before:left-0 before:bg-[#9EA0A063]"
+                    >
+                        <h6 class="text-lg font-bold mb-1">Date:</h6>
+                        <span
+                            class="pl-10 text-[#9EA0A0] relative before:absolute before:w-8 before:h-px before:top-1/2 before:left-0 before:bg-[#1ab69d]"
+                            >2024</span
+                        >
+                    </div>
+                    <div
+                        class="mb-4 pb-4 relative before:absolute before:w-2/3 before:h-px before:bottom-0 before:left-0 before:bg-[#9EA0A063]"
+                    >
+                        <h6 class="text-lg font-bold mb-1">Tech stack:</h6>
+                        <span
+                            class="pl-10 block text-[#9EA0A0] relative before:absolute before:w-8 before:h-px before:top-1/2 before:left-0 before:bg-[#1ab69d]"
+                            >Flutter・NestJS・PostgreSQL・Prisma</span
+                        >
+                        <span
+                            class="pl-10 text-[#9EA0A0] relative before:absolute before:w-8 before:h-px before:top-1/2 before:left-0 before:bg-[#1ab69d]"
+                            >Docker・Dio・Hive・Socket.IO・Node.js</span
+                        >
+                    </div>
+                    <div
+                        class="mb-4 pb-4 relative before:absolute before:w-2/3 before:h-px before:bottom-0 before:left-0 before:bg-[#9EA0A063]"
+                    >
+                        <h6 class="text-lg font-bold mb-1">Availability:</h6>
+                        <span
+                            class="pl-10 text-[#9EA0A0] relative before:absolute before:w-8 before:h-px before:top-1/2 before:left-0 before:bg-[#1ab69d]"
+                            >Windows・Linux・macOS・Android・iOS・WEB</span
+                        >
+                    </div>
+                    <div
+                        class="mb-4 pb-4 relative before:absolute before:w-2/3 before:h-px before:bottom-0 before:left-0 before:bg-[#9EA0A063]"
+                    >
+                        <h6 class="text-lg font-bold mb-1">License:</h6>
+                        <a
+                            class="transition-colors text-[#1ab69d] hover:text-[#067259] pl-10 relative before:absolute before:w-8 before:h-px before:top-1/2 before:left-0 before:bg-[#1ab69d]"
+                            href="https://github.com/TheMultii/MarkdownNotepad"
+                            >Application developed for an engineering thesis.</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-1 md:flex-initial md:w-8/12">
+            <div class="grid grid-cols-2 gap-1.5 md:gap-6">
+                {
+                    ["mdn-1", "mdn-2", "mdn-3", "mdn-4"].map((e) => {
+                        return (
+                            <div class="relative pb-[100%] rounded-lg overflow-hidden">
+                                <SolidImg
+                                    client:visible
+                                    alt={e}
+                                    src={`/assets/markdown-notepad/${e}.webp`}
+                                />
+                            </div>
+                        );
+                    })
+                }
+            </div>
+        </div>
+    </div>
+</MainLayout>
