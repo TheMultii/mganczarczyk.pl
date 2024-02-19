@@ -1,0 +1,96 @@
+---
+import "./Technologies.css";
+
+import typeScriptIcon from "../../assets/icons/typescript.svg?raw";
+import reactIcon from "../../assets/icons/react.svg?raw";
+import flutterIcon from "../../assets/icons/flutter.svg?raw";
+import nodeJSIcon from "../../assets/icons/nodejs.svg?raw";
+import pythonIcon from "../../assets/icons/python.svg?raw";
+import dotNetIcon from "../../assets/icons/dotnet.svg?raw";
+
+type Technology = {
+    name: string;
+    icon: string;
+    color: string;
+    textColor: string;
+    fillColor: string;
+};
+
+const blocks: Technology[] = [
+    {
+        name: "TypeScript & JavaScript",
+        icon: typeScriptIcon,
+        color: "bg-[#8e72eb2b]",
+        textColor: "group-hover:text-[#8f72ed]",
+        fillColor: "group-hover:fill-[#8f72ed]",
+    },
+    {
+        name: "React & React Native",
+        icon: reactIcon,
+        color: "bg-[#c4744226]",
+        textColor: "group-hover:text-[#c45b42]",
+        fillColor: "group-hover:fill-[#c45b42]",
+    },
+    {
+        name: "Flutter",
+        icon: flutterIcon,
+        color: "bg-[#2fb2bb38]",
+        textColor: "group-hover:text-[#2fb2bb]",
+        fillColor: "group-hover:fill-[#2fb2bb]",
+    },
+    {
+        name: "Node.js",
+        icon: nodeJSIcon,
+        color: "bg-[#42c46a33]",
+        textColor: "group-hover:text-[#42c46a]",
+        fillColor: "group-hover:fill-[#42c46a]",
+    },
+
+    {
+        name: "Python",
+        icon: pythonIcon,
+        color: "bg-[#f9df6838]",
+        textColor: "group-hover:text-[#dbbc32]",
+        fillColor: "group-hover:fill-[#dbbc32]",
+    },
+
+    {
+        name: ".NET",
+        icon: dotNetIcon,
+        color: "bg-[#c4428426]",
+        textColor: "group-hover:text-[#c44284]",
+        fillColor: "group-hover:fill-[#c44284]",
+    },
+];
+---
+
+<div class="mg-container mx-auto mt-12 lg:mt-24">
+    <div class="flex justify-center mb-6">
+        <h6
+            class="bg-[#232323] rounded-full tracking-wide uppercase px-4 py-2 text-gray text-base"
+        >
+            Tech Stack
+        </h6>
+    </div>
+    <div class="flex flex-wrap justify-center">
+        {
+            blocks.map((block) => (
+                <div class="w-[42%] sm:w-[35%] md:w-1/3 lg:w-1/6 px-2 mb-4 lg:mb-0">
+                    <div class="bg-[#121212] relative technology-transition rounded-lg aspect-square text-center justify-center flex-wrap px-3.5 py-6 group hover:scale-105">
+                        <div
+                            class={`absolute top-0 left-0 w-full h-full rounded-lg ${block.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-linear`}
+                        />
+                        <div
+                            class={`h-full flex flex-col justify-evenly text-white ${block.textColor} ${block.fillColor} [&>svg]:w-full [&>svg]:h-4/6 lg:[&>svg]:h-[40%]`}
+                        >
+                            <Fragment set:html={block.icon} />
+                            <h3 class="transition-colors mt-4 text-sm lg:text-lg font-bold duration-300 ease-linear">
+                                {block.name}
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
+</div>
