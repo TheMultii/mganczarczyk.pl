@@ -1,0 +1,122 @@
+---
+import { SolidImg } from "../../components/ImagePreview/SolidImg";
+import MainLayout from "../../layouts/main-layout.astro";
+---
+
+<MainLayout>
+  <div class="w-full grid place-items-center">
+    <div
+      class="rounded-xl w-[95%] lg:w-[80%] mt-24 py-[4.25rem] lg:py-24 text-center bg-black text-3xl sm:text-4xl lg:text-5xl relative z-[1] after:z-[-1] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-[url('/assets/bitad_2024_app.webp')] after:bg-cover after:bg-center after:bg-no-repeat after:rounded-xl after:opacity-[.0875]"
+    >
+      Bitad 2024 App
+    </div>
+  </div>
+  <div class="w-3/4 lg:w-[30%] mx-auto my-8">
+    <h5
+      class="text-center flex flex-row before:mr-2.5 after:ml-2.5 before:flex-1 before:m-auto before:border-b before:border-solid after:flex-1 after:m-auto after:border-b after:border-solid before:opacity-[.375] after:opacity-[.375]"
+    >
+      Marcel Gańczarczyk
+    </h5>
+  </div>
+
+  <div
+    class="mg-container px-2 md:px-0 mx-auto flex flex-col md:flex-row gap-4 mb-8"
+  >
+    <div class="flex-1 md:flex-initial md:w-4/12">
+      <div class="pb-6 mb-12 md:mb-20 border-b border-[#9EA0A063]">
+        <h2
+          class="mb-8 text-3xl text-center md:text-left md:text-4xl lg:text-5xl font-bold"
+        >
+          Bitad 2024 App Details
+        </h2>
+        <p class="text-[#9EA0A0]">
+          Application and website developed for the Bitad 2024 event organized
+          by the university group Reset UBB. The application and website were
+          designed to help attendees navigate and get the most out of the event.
+          The website allowed attendees to register for the event, view the
+          schedule, and get information about the speakers. The application
+          allowed attendees to view the agenda and speakers, register for
+          workshops, and see which workshops they had registered for. The
+          application also included a QR code scanner that allowed attendees to
+          increase their chances of winning prizes by scanning QR codes during
+          each presentation, workshop, or other ancillary activity.
+        </p>
+        <p class="mt-5">
+          <p class="text-[#9EA0A0]">
+            WEB・<span>No longer available</span>
+          </p>
+          <p class="text-[#9EA0A0]">
+            Android・<span>No longer available</span>
+          </p>
+          <p class="text-[#9EA0A0]">
+            iOS・<span>No longer available</span>
+          </p>
+        </p>
+      </div>
+      <div>
+        <h4
+          class="text-2xl font-bold pb-3 mb-6 relative before:absolute before:bottom-0 before:left-0 before:w-[80%] md:before:w-[90%] before:h-px before:bg-[#9EA0A063] after:absolute after:left-0 after:bottom-0 after:w-1/3 after:h-px after:bg-[#1ab69d]"
+        >
+          Project Details
+        </h4>
+        <div>
+          <div
+            class="mb-4 pb-4 relative before:absolute before:w-2/3 before:h-px before:bottom-0 before:left-0 before:bg-[#9EA0A063]"
+          >
+            <h6 class="text-lg font-bold mb-1">Date:</h6>
+            <span
+              class="pl-10 text-[#9EA0A0] relative before:absolute before:w-8 before:h-px before:top-1/2 before:left-0 before:bg-[#1ab69d]"
+              >April 26, 2024</span
+            >
+          </div>
+          <div
+            class="mb-4 pb-4 relative before:absolute before:w-2/3 before:h-px before:bottom-0 before:left-0 before:bg-[#9EA0A063]"
+          >
+            <h6 class="text-lg font-bold mb-1">Tech stack:</h6>
+            <span
+              class="pl-10 text-[#9EA0A0] relative before:absolute before:w-8 before:h-px before:top-1/2 before:left-0 before:bg-[#1ab69d]"
+              >Next.js・React Native・Expo・Docker</span
+            >
+          </div>
+          <div
+            class="mb-4 pb-4 relative before:absolute before:w-2/3 before:h-px before:bottom-0 before:left-0 before:bg-[#9EA0A063]"
+          >
+            <h6 class="text-lg font-bold mb-1">Availability:</h6>
+            <span
+              class="pl-10 text-[#9EA0A0] relative before:absolute before:w-8 before:h-px before:top-1/2 before:left-0 before:bg-[#1ab69d]"
+              >Android・iOS・WEB</span
+            >
+          </div>
+          <div
+            class="mb-4 pb-4 relative before:absolute before:w-2/3 before:h-px before:bottom-0 before:left-0 before:bg-[#9EA0A063]"
+          >
+            <h6 class="text-lg font-bold mb-1">License:</h6>
+            <span
+              class="pl-10 text-[#9EA0A0] relative before:absolute before:w-8 before:h-px before:top-1/2 before:left-0 before:bg-[#1ab69d]"
+              >Created only for Reset UBB 🔐</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-1 md:flex-initial md:w-8/12">
+      <div class="grid grid-cols-2 gap-1.5 md:gap-6">
+        {
+          ["bitad-2024-1", "bitad-2024-2", "bitad-2024-3", "bitad-2024-4"].map(
+            (e) => {
+              return (
+                <div class="relative pb-[100%] rounded-lg overflow-hidden">
+                  <SolidImg
+                    client:visible
+                    alt={e}
+                    src={`/assets/bitad-2024-app/${e}.webp`}
+                  />
+                </div>
+              );
+            }
+          )
+        }
+      </div>
+    </div>
+  </div>
+</MainLayout>
