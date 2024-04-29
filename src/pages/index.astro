@@ -6,48 +6,48 @@ import PortfolioItem from "../components/PortfolioItem/PortfolioItem.astro";
 ---
 
 <MainLayout>
-    <Header client:visible />
-    <Technologies />
-    <PortfolioItem
-        title="UBB Timetable"
-        descriptionPrimary="An unofficial timetable that allows you to easily view the timetable of the University of Bielsko-Biała. Automatically synchronises changes made to the timetable. Written with ease of use in mind. Downloaded over 400 times within one academic year. 😎"
-        technologies="Flutter・Dart・Python・MariaDB"
-        availability="Android・WEB (soon)・Windows (soon)"
-        imageURL="/assets/ubb_timetable/ubb-1.webp"
-    />
-    <PortfolioItem
-        title="Markdown Notepad"
-        descriptionPrimary="Application developed for an engineering thesis. It is an editor for notes in markdown format. It allows the creation and export of notes, folders and tags, collaboration and the creation of extensions. The project consists of two parts - a backend written in NestJS and a frontend written in Flutter. The key idea was to ensure that the client application could run on as many platforms as possible, maintaining full functionality regardless of operating system or web browser. The app also supports displaying the user's status on Discord. 👀"
-        technologies="Flutter・NestJS・PostgreSQL・Docker"
-        availability="Windows・Linux・macOS・Android・iOS・WEB"
-        imageURL="/assets/markdown-notepad/mdn-1.webp"
-    />
-    <PortfolioItem
-        title="Science Point LAB - IT puzzle room"
-        descriptionPrimary="A co-created escape room inspired puzzle room. Players are crew members of a space mission and must fix a ship malfunction in order to survive and return safely to Earth. Participants use their logical thinking skills and learn the basics of electronics, computer science and physics. It was created for the Science Point LAB project. 🧪"
-        technologies="C#・Unity・Soldering iron・ESP32・C++"
-        availability="IRL"
-        imageURL="/assets/sciencepoint-lab/sciencepoint-lab-1.webp"
-    />
-    <PortfolioItem
-        title="Collection of questions for IT technician exams"
-        descriptionPrimary="A collection of questions with answers for the IT technician exams. All presented on one page, without the need for unnecessary navigation. Many of the questions available there are ranked high in positioning by Google. The site is most visited in January and June - the exam months. 💪"
-        technologies="React・MariaDB"
-        availability="WEB"
-        imageURL="/assets/it_technician_exams/it-1.webp"
-    />
-    <PortfolioItem
-        title="Auto Avatar Cropper"
-        descriptionPrimary="A website that allows you to automatically crop faces from images using artificial intelligence. The trained model returns a square image with the face cropped 1:1. The model works very well with images of people, but should also recognize faces of anime characters. It's completely free and without ads. 🤖"
-        technologies="React・Python・PyTorch"
-        availability="WEB"
-        imageURL="/assets/auto_avatar_cropper/aac-1.webp"
-    />
-    <PortfolioItem
-        title="Tairiku"
-        descriptionPrimary="A service that indexes and collects anime graphics into a database. There is also an API that returns a random graphic from the database with information about that graphic (width, height, source, hash), and a website and smartphone app for viewing and possibly saving those graphics to disk. An ideal application when we need an 'image placeholder'. The database contains over 4 million records collected continuously for over 5 years from sites such as Reddit/Imgur. 🖼️"
-        technologies="React・Python・MariaDB"
-        availability="WEB・Android"
-        useBlurhashImageComponent={true}
-    />
+  <Header client:visible />
+  <Technologies />
+  <PortfolioItem
+    title="UBB Timetable"
+    descriptionPrimary="An unofficial timetable that allows you to easily view the timetable of the University of Bielsko-Biała. Automatically synchronises changes made to the timetable. Written with ease of use in mind. Downloaded over 600 times within one academic year. 😎"
+    technologies="Flutter・Dart・Python・MariaDB"
+    availability="Android・WEB (soon)・Windows (soon)"
+    imageURL="/assets/ubb_timetable/ubb-1.webp"
+  />
+  <PortfolioItem
+    title="Markdown Notepad"
+    descriptionPrimary="Application developed for an engineering thesis. It is an editor for notes in markdown format. It allows the creation and export of notes, folders and tags, collaboration and the creation of extensions. The project consists of two parts - a backend written in NestJS and a frontend written in Flutter. The key idea was to ensure that the client application could run on as many platforms as possible, maintaining full functionality regardless of operating system or web browser. The app also supports displaying the user's status on Discord. 👀"
+    technologies="Flutter・NestJS・PostgreSQL・Docker"
+    availability="Windows・Linux・macOS・Android・iOS・WEB"
+    imageURL="/assets/markdown-notepad/mdn-1.webp"
+  />
+  <PortfolioItem
+    title="Science Point LAB - IT puzzle room"
+    descriptionPrimary="A co-created escape room inspired puzzle room. Players are crew members of a space mission and must fix a ship malfunction in order to survive and return safely to Earth. Participants use their logical thinking skills and learn the basics of electronics, computer science and physics. It was created for the Science Point LAB project. 🧪"
+    technologies="C#・Unity・Soldering iron・ESP32・C++"
+    availability="IRL"
+    imageURL="/assets/sciencepoint-lab/sciencepoint-lab-1.webp"
+  />
+  <PortfolioItem
+    title="Collection of questions for IT technician exams"
+    descriptionPrimary="A collection of questions with answers for the IT technician exams. All presented on one page, without the need for unnecessary navigation. Many of the questions available there are ranked high in positioning by Google. The site is most visited in January and June - the exam months. 💪"
+    technologies="React・MariaDB"
+    availability="WEB"
+    imageURL="/assets/it_technician_exams/it-1.webp"
+  />
+  <PortfolioItem
+    title="Auto Avatar Cropper"
+    descriptionPrimary="A website that allows you to automatically crop faces from images using artificial intelligence. The trained model returns a square image with the face cropped 1:1. The model works very well with images of people, but should also recognize faces of anime characters. It's completely free and without ads. 🤖"
+    technologies="React・Python・PyTorch"
+    availability="WEB"
+    imageURL="/assets/auto_avatar_cropper/aac-1.webp"
+  />
+  <PortfolioItem
+    title="Tairiku"
+    descriptionPrimary="A service that indexes and collects anime graphics into a database. There is also an API that returns a random graphic from the database with information about that graphic (width, height, source, hash), and a website and smartphone app for viewing and possibly saving those graphics to disk. An ideal application when we need an 'image placeholder'. The database contains over 4 million records collected continuously for over 5 years from sites such as Reddit/Imgur. 🖼️"
+    technologies="React・Python・MariaDB"
+    availability="WEB・Android"
+    useBlurhashImageComponent={true}
+  />
 </MainLayout>
