@@ -1,5 +1,5 @@
 import { decode } from "blurhash";
-import { Accessor, Setter } from "solid-js";
+import { type Accessor, type Setter } from "solid-js";
 
 type TairikuImageResponse = {
     count: number;
