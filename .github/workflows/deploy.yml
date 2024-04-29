@@ -20,11 +20,11 @@ jobs:
                   cd dist
             - name: Deploy
               run: |
-                  rm ${{ secrets.PATH }}/* -R
+                  rm ${{ secrets.PATHPROD }}/* -R
                   cd dist
-                  cp * ${{ secrets.PATH }}/ -R
+                  cp * ${{ secrets.PATHPROD }}/ -R
                   cd ${{ secrets.ADDITIONALPATH }}
-                  cp * ${{ secrets.PATH }}/ -R
-                  cd ${{ secrets.PATH }}
+                  cp * ${{ secrets.PATHPROD }}/ -R
+                  cd ${{ secrets.PATHPROD }}
                   chmod 755 * -R
                   chown www-data:www-data * -R
