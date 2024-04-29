@@ -10,11 +10,13 @@ jobs:
         runs-on: self-hosted
 
         steps:
-            - uses: actions/checkout@v3
-            - name: Use Node.js 20
+            - uses: oven-sh/setup-bun@v1
+              with:
+                bun-version: latest
+            - name: Use Bun
               run: |
-                  npm i
-                  npm run build
+                  bun i
+                  bun run build
                   cd dist
             - name: Deploy
               run: |
