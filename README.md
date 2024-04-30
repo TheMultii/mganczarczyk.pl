@@ -12,12 +12,12 @@ This repo consists of the source code of my personal website. It's built using [
 
 ## Development
 
-To run the project locally get required nodejs version from `.tool-versions` and `npm`. Then run the following commands:
+To run the project locally get required nodejs version from `.tool-versions` and `bun`. Then run the following commands:
 
 ```bash
 git clone https://github.com/TheMultii/mganczarczyk.pl
-npm install
-npm run dev
+bun install
+bun run dev
 ```
 
 ## Deployment
