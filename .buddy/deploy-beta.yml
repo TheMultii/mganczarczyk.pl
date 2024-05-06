@@ -18,6 +18,7 @@
     docker_image_name: "oven/bun"
     docker_image_tag: "latest"
     execute_commands:
+    - "[ \"$branch\" = \"master\" ] && git checkout master"
     - "bun i"
     - "bun run build"
     - "cd dist"
