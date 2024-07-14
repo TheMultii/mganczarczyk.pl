@@ -6,7 +6,7 @@ import PortfolioItem from "../components/PortfolioItem/PortfolioItem.astro";
 ---
 
 <MainLayout>
-  <Header client:visible />
+  <div class="h-screen lg:h-[99vh] max-h-[1080px]"><Header client:only="solid-js" /></div>
   <Technologies />
   <PortfolioItem
     title="UBB Timetable"

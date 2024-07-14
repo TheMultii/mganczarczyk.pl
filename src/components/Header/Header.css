@@ -1,7 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;700&display=swap");
 
 h1,
 h2,
-h3 {
-    font-family: "Plus Jakarta Sans", sans-serif;
+.polygon-section {
+  font-family: "DM Sans", sans-serif;
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.animate-hue {
+  animation: hue 10s infinite linear;
 }
