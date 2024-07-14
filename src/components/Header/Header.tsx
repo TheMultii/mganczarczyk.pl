@@ -106,7 +106,7 @@ const Header = () => {
         </h1>
         <div class="polygon-section relative mt-2 md:mt-0" ref={cursorRef}>
           <img
-            class="absolute top-[-20px] left-[-20px] align-middle hidden md:block"
+            class="absolute top-[-20px] left-[-20px] align-middle hidden md:block select-none pointer-events-none"
             src="assets/Polygon-arrow.svg"
             alt=""
           />
