@@ -17,32 +17,23 @@ const Header = () => {
       s2.src = "https://mganczarczyk.pl/_astro/HeaderShader.js";
       script.async = false;
       document.head.appendChild(s2);
+      s2.onload = () => {
+        animate(
+          document.querySelector(".header-canvas"),
+          { opacity: [0, 1] },
+          { duration: 0.75 }
+        );
+      };
     };
 
     document.head.appendChild(script);
 
-    animate(
-      document.querySelector(".header-canvas"),
-      { opacity: [0, 1] },
-      { duration: 0.75 }
-    );
     animate(
       handRef,
       { rotate: [0, 14, -8, 14, -4, 10, 0, 0] },
       { duration: 2.5, repeat: Infinity }
     );
 
-    onCleanup(() => {
-      document
-        .querySelector('script[src="https://mganczarczyk.pl/_astro/ShaderProgram.js')
-        ?.remove();
-      document
-        .querySelector('script[src="https://mganczarczyk.pl/_astro/HeaderShader.js')
-        ?.remove();
-    });
-  });
-
-  createEffect(() => {
     const img = new Image();
     img.onload = () => {
       imageRef.src = img.src;
@@ -50,7 +41,20 @@ const Header = () => {
     };
 
     img.src = images[Math.floor(Math.random() * images.length)].urls.regular;
-  }, []);
+
+    onCleanup(() => {
+      document
+        .querySelector(
+          'script[src="https://mganczarczyk.pl/_astro/ShaderProgram.js'
+        )
+        ?.remove();
+      document
+        .querySelector(
+          'script[src="https://mganczarczyk.pl/_astro/HeaderShader.js'
+        )
+        ?.remove();
+    });
+  });
 
   onMount(() => {
     const onMouseMove = (e: MouseEvent) => {
@@ -94,7 +98,7 @@ const Header = () => {
             👋
           </span>
         </h2>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-center">
+        <h1 class="mx-2 md:mx-0 text-4xl md:text-5xl lg:text-6xl font-bold text-center">
           <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#1ab69d] to-[#4de7d0] animate-hue">
             Mobile & Web
           </span>{" "}
