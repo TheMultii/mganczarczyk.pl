@@ -93,7 +93,7 @@ const Header = () => {
 
       <div class="z-1 flex items-center flex-col gap-y-4 md:gap-y-7 place-content-center">
         <h2 class="text-xl md:text-4xl text-center">
-          Hello, I am
+          Hello, I am a
           <span ref={handRef} class="origin-[70%_70%] inline-block ml-2 select-none pointer-events-none">
             👋
           </span>
