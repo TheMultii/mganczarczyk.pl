@@ -1,5 +1,6 @@
 ---
 const { author, description } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/Footer/Footer.astro";
 import Nav from "../components/Nav/Nav.astro";
 import { AUTHOR, DESCRIPTION } from "../consts";
@@ -17,6 +18,7 @@ import "./main-layout.css";
         <meta name="author" content={AUTHOR} />
         <link rel="icon" href="/assets/favicon.webp" type="x-icon" />
         <title>{meta_description}</title>
+        <ViewTransitions />
     </head>
     <body class="bg-[#181818] text-white dark">
         <Nav />
